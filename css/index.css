@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --ea-gold: #BF9B5E;
+    --ea-gold-dark: #a3814b;
+    --ea-dark: #1A1A1B;
+    --ea-grey: #4A4A4B;
+    --ea-light: #F5F5F7;
+    --bg-white: #ffffff;
+
+    --text-main: #2D3748;
+    --text-muted: #718096;
+
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--ea-light);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sidebars */
+.sidebar-accessibility {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.accessibility-icon {
+    background: var(--ea-gold);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.accessibility-icon:hover {
+    transform: scale(1.1);
+    background: var(--ea-gold-dark);
+}
+
+.sidebar-social {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+    z-index: 1000;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--ea-dark);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background: var(--imas-gold);
+    transform: translateX(5px);
+}
+
+/* Header & Top Nav */
+.main-header {
+    background: white;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--ea-gold);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ea-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ea-logo img {
+    height: 60px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+}
+
+.brand-text .inst {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--ea-grey);
+}
+
+.brand-text .gov {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.top-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: var(--ea-grey);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.top-nav a:hover {
+    color: var(--imas-gold);
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    width: 150px;
+}
+
+.search-box button {
+    background: var(--ea-dark);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* Mega Nav */
+.mega-nav {
+    background: rgba(26, 26, 27, 0.95);
+    padding: 0;
+}
+
+.mega-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.mega-nav li a {
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.mega-nav li a:hover,
+.mega-nav li a.highlighted {
+    background: var(--ea-gold);
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 600px;
+    background-image: url('eduatleta_hero.png');
+    /* Fallback or relative path if copied */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* If hero image is not copied, use a generic one or gradient */
+.hero:not([style*="url"]) {
+    background: linear-gradient(135deg, #1a2a4e 0%, #004fb0 100%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    max-width: 600px;
+}
+
+/* Site Content: Noticias & Avisos */
+.content-split-bg {
+    padding: 0;
+    margin-top: 40px;
+}
+
+.container-split {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    max-width: 1300px;
+}
+
+.column-news,
+.column-avisos {
+    flex: 1;
+    padding: 60px 40px;
+    color: white;
+}
+
+.column-news {
+    background: #004fb0;
+}
+
+.column-avisos {
+    background: #14213d;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.column-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.column-news .column-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--imas-gold);
+}
+
+.column-avisos .column-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #ffffff;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.news-main-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.news-image:hover img {
+    transform: scale(1.05);
+}
+
+.news-article h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.date {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.avisos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.aviso-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aviso-item:last-child {
+    border-bottom: none;
+}
+
+.aviso-item .icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.aviso-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.aviso-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Portal Section Styles */
+#portal-container {
+    padding: 60px 0;
+}
+
+.portal-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    margin: 0 auto;
+    border-top: 5px solid var(--ea-gold);
+}
+
+.portal-card h2 {
+    color: var(--ea-dark);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.portal-card .subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.btn-gold {
+    background: var(--ea-gold);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.btn-gold:hover {
+    background: var(--ea-gold-dark);
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Dashboard Institutional */
+.dashboard-portal {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.admin-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th {
+    background: #f8fafc;
+    color: var(--ea-grey);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--ea-gold);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.main-footer {
+    background: var(--ea-dark);
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CTA Banners */
+.cta-grid {
+    display: flex;
+    gap: 20px;
+    padding: 60px 0;
+}
+
+.cta-banner {
+    flex: 1;
+    height: 250px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.cta-banner.work {
+    background-image: url('work_cta.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-banner.survey {
+    background-image: url('survey_cta.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 5;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.cta-banner h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.cta-banner.work h3 {
+    color: #ffd700;
+    /* Gold/Yellow for the Work title */
+}
+
+.cta-banner p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.btn-dark {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #1a2a4e;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--ea-gold);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.benefit-card {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card span {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.card-orange {
+    background: #d37a1c;
+}
+
+.card-blue {
+    background: #3b4ba1;
+}
+
+.card-green {
+    background: #76a04a;
+}
+
+.card-teal {
+    background: #20b2aa;
+}
+
+.card-pink {
+    background: #b04377;
+}
+
+@media (max-width: 1100px) {
+    .container-split {
+        flex-direction: column;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-grid {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.highlighted {
+    font-weight: 800 !important;
+}

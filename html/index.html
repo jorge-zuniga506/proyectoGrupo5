@@ -1,12 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EduAtleta - Becas de Estudio y Deporte | Costa Rica</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
-<body>
 
-    
+<body>
+    <!-- Accessibility Sidebar -->
+    <div class="sidebar-accessibility">
+        <div class="accessibility-icon">♿</div>
+    </div>
+
+    <!-- Social Sidebar -->
+    <div class="sidebar-social">
+        <a href="#" class="social-icon fb">f</a>
+        <a href="#" class="social-icon yt">▶</a>
+        <a href="#" class="social-icon x">𝕏</a>
+        <a href="#" class="social-icon ig">📷</a>
+        <a href="#" class="social-icon tk">♪</a>
+    </div>
+
+    <!-- Top Header -->
+    <header class="main-header">
+        <div class="container container-header">
+            <div class="logo-area">
+                <div class="ea-logo">
+                    <img src="eduatleta_logo.png" alt="EduAtleta Logo">
+                    <div class="brand-text">
+                        <span class="inst">EDUATLETA</span>
+                        <span class="gov">PROGRAMA NACIONAL DE BECAS</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#" onclick="location.reload()">Inicio</a></li>
+                    <li><a href="#">Becas Estudio</a></li>
+                    <li><a href="#">Becas Deporte</a></li>
+                    <li><a href="#">Directorio</a></li>
+                    <li>
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar beca...">
+                            <button>Buscar</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="mega-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">ACERCA DE EDUATLETA</a></li>
+                <li><a href="#">REQUISITOS</a></li>
+                <li><a href="#" id="nav-services">ESTUDIOS</a></li>
+                <li><a href="#">DEPORTES</a></li>
+                <li><a href="#">CENTRO DE PRENSA</a></li>
+                <li><a href="#">RESULTADOS</a></li>
+                <li><a href="#" id="nav-portal" class="highlighted">PORTAL DE BECAS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Site Hero Section (Homepage) -->
+        <section id="hero-section" class="hero" style="background-image: url('eduatleta_hero.png');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>EDUATLETA</h1>
+                <p>Impulsando el futuro de Costa Rica a través de la excelencia académica y el talento deportivo. El
+                    apoyo que necesitas para llegar más alto.</p>
+                <div class="hero-actions">
+                    <button class="btn-gold" id="btn-explore">SOLICITE SU BECA AQUÍ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Noticias and Avisos Section -->
+        <section id="site-content" class="content-split-bg">
+            <div class="container container-split">
+                <!-- Noticias Column -->
+                <div class="column-news">
+                    <div class="news-main-card">
+                        <div class="news-image">
+                            <!-- Generic image for news -->
+                            <img src="news_family.png" alt="Estudiante Destacado">
+                        </div>
+                        <div class="news-body">
+                            <div class="column-header">
+                                <h2>Novedades</h2>
+                                <a href="#" class="btn-outline">Más noticias +</a>
+                            </div>
+                            <div class="news-article">
+                                <h3>Costa Rica celebra 500 nuevas becas para deportistas de alto rendimiento</h3>
+                                <p class="date">Jueves 29 de Enero, 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avisos Column -->
+                <div class="column-avisos">
+                    <div class="column-header">
+                        <h2>Convocatorias</h2>
+                        <a href="#" class="btn-outline">Ver todas +</a>
+                    </div>
+                    <div class="avisos-list">
+                        <div class="aviso-item">
+                            <span class="icon">🎓</span>
+                            <div class="aviso-text">
+                                <h4>Apertura: Beca Excelencia Académica 2026</h4>
+                                <p class="date">Periodo de recepción: Feb - Mar</p>
+                            </div>
+                        </div>
+                        <div class="aviso-item">
+                            <span class="icon">🏃‍♂️</span>
+                            <div class="aviso-text">
+                                <h4>Becas para Atletas Federados: I Ciclo</h4>
+                                <p class="date">Últimos días para postularse</p>
+                            </div>
+                        </div>
+                        <div class="aviso-item">
+                            <span class="icon">📢</span>
+                            <div class="aviso-text">
+                                <h4>Feria EduAtleta en la Sabana</h4>
+                                <p>Este fin de semana, conoce todos los programas de apoyo para jóvenes promesas en el
+                                    Estadio Nacional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: CTA Banners -->
+        <section id="cta-section" class="container">
+            <div class="cta-grid">
+                <div class="cta-banner work">
+                    <div class="cta-overlay"></div>
+                    <div class="cta-content">
+                        <h3>¿ERES UN ATLETA DE PROYECCIÓN?</h3>
+                        <button class="btn-dark">POSTÚLATE AL PROGRAMA</button>
+                    </div>
+                </div>
+                <div class="cta-banner survey">
+                    <div class="cta-overlay"></div>
+                    <div class="cta-content">
+                        <h3 style="color: #ff4500;">ENCUESTA DE SEGUIMIENTO EDUCATIVO</h3>
+                        <p>Danos tu opinión sobre los beneficios recibidos en este ciclo lectivo.</p>
+                        <button class="btn-dark">LLENAR FORMULARIO</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Servicios y Beneficios -->
+        <section id="benefits-section" class="container benefits-section">
+            <h2 class="section-title">Nuestros Programas</h2>
+            <div class="benefits-grid">
+                <a href="#" class="benefit-card card-orange">
+                    <i>🏫</i>
+                    <span>Primaria y Secundaria</span>
+                </a>
+                <a href="#" class="benefit-card card-blue">
+                    <i>�️</i>
+                    <span>Estudios Universitarios</span>
+                </a>
+                <a href="#" class="benefit-card card-green">
+                    <i>🥇</i>
+                    <span>Atletas de Élite</span>
+                </a>
+                <a href="#" class="benefit-card card-teal">
+                    <i>�</i>
+                    <span>Deportes de Conjunto</span>
+                </a>
+                <a href="#" class="benefit-card card-pink">
+                    <i>🎒</i>
+                    <span>Materiales y Equipo</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- NEW: Historias -->
+        <section id="stories-section" class="container stories-section">
+            <h2 class="section-title">Historias de Éxito</h2>
+            <div class="stories-container">
+                <div class="story-text">
+                    <h3>Kevin Arrieta - Oro Estudiantil</h3>
+                    <p>“Gracias a la beca de EduAtleta, pude terminar mi carrera de Ingeniería mientras competía en el
+                        equipo nacional de Natación. EduAtleta creyó en mí cuando más lo necesité.”</p>
+                </div>
+                <div class="story-video">
+                    <div class="video-wrapper">
+                        <!-- YouTube Embed for Study/Sports context -->
+                        <iframe src="https://www.youtube.com/embed/RmsB1U6Y_Bw" title="Testimonio EduAtleta"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAL SECTION (Existing App Logic) -->
+        <div id="portal-container" class="container hidden">
+            <!-- App UI will reside here -->
+            <div id="app">
+                <!-- Login Card -->
+                <section id="login-section" class="portal-card">
+                    <h2>Portal EduAtleta</h2>
+                    <p class="subtitle">Gestiona tu beca académica o deportiva</p>
+                    <div id="login-error" class="error-msg hidden"></div>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Correo Electrónico</label>
+                            <input type="email" id="login-email" required placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Contraseña</label>
+                            <input type="password" id="login-password" required placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn-gold">Entrar al Portal</button>
+                    </form>
+                    <p class="link-action">
+                        ¿Nuevo postulante? <a href="#" id="go-to-register">Crea tu cuenta aquí</a>
+                    </p>
+                </section>
+
+                <!-- Register Card -->
+                <section id="register-section" class="portal-card hidden">
+                    <h2>Perfil del Estudiante-Atleta</h2>
+                    <p class="subtitle">Inicia tu camino a la excelencia</p>
+                    <div id="register-error" class="error-msg hidden"></div>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="reg-name">Nombre Completo</label>
+                            <input type="text" id="reg-name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">Correo Electrónico</label>
+                            <input type="email" id="reg-email" required placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">Contraseña</label>
+                            <input type="password" id="reg-password" required placeholder="Mínimo 6 caracteres">
+                        </div>
+                        <button type="submit" class="btn-gold">Registrar Perfil</button>
+                    </form>
+                    <p class="link-action">
+                        ¿Ya tienes perfil? <a href="#" id="go-to-login">Inicia Sesión</a>
+                    </p>
+                </section>
+
+                <!-- Main Content (Dashboard) -->
+                <section id="dashboard-section" class="dashboard-portal hidden">
+                    <!-- Content will be injected by script.js -->
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>CONTACTO EDUATLETA</h3>
+                <p>📞 Línea Directa: 2222-BECAS</p>
+                <p>📧 Consultas: becas@eduatleta.go.cr</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 EduAtleta - Gobierno de Costa Rica</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (Reused and Styled) -->
+    <div id="convocatoria-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Gestión de Beca</h2>
+            <form id="convocatoria-form">
+                <input type="hidden" id="conv-id">
+                <div class="form-group">
+                    <label for="conv-titulo">Título de la Convocatoria</label>
+                    <input type="text" id="conv-titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="conv-tipo">Tipo</label>
+                    <select id="conv-tipo">
+                        <option value="Académica">Académica</option>
+                        <option value="Deportiva">Deportiva</option>
+                        <option value="Económica">Económica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="conv-fecha">Fecha de Cierre</label>
+                    <input type="date" id="conv-fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="conv-requisitos">Requisitos / Perfil</label>
+                    <textarea id="conv-requisitos" rows="3" required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-gold">Publicar Beca</button>
+                    <button type="button" id="close-modal-btn" class="btn-cancel">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Postulación Modal -->
+    <div id="postulacion-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Formulario de Solicitud EduAtleta</h2>
+            <p id="post-scholarship-name"></p>
+            <form id="postulacion-form">
+                <input type="hidden" id="post-conv-id">
+                <div class="form-group">
+                    <label for="post-edad">Edad</label>
+                    <input type="number" id="post-edad" required min="10" max="60">
+                </div>
+                <div class="form-group">
+                    <label for="post-nivel">Área de Interés</label>
+                    <select id="post-nivel">
+                        <option value="Colegio">Secundaria</option>
+                        <option value="Universidad">Universitaria</option>
+                        <option value="Deporte">Deportiva (Federado)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="post-ingresos">Puntaje / Promedio Actual</label>
+                    <input type="number" id="post-ingresos" required min="0" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="post-motivo">Plan de Vida y Carrera</label>
+                    <textarea id="post-motivo" rows="3" required
+                        placeholder="Explica tus metas académicas y deportivas..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-gold">Enviar Postulación</button>
+                    <button type="button" id="close-post-modal-btn" class="btn-cancel">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Evaluación Modal -->
+    <div id="evaluacion-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Comité de Selección EduAtleta</h2>
+            <p id="eval-applicant-name"></p>
+            <p id="eval-scholarship-name"></p>
+            <form id="evaluacion-form">
+                <input type="hidden" id="eval-post-id">
+                <div class="form-group">
+                    <label for="eval-economica">Situación Social (40%)</label>
+                    <input type="number" id="eval-economica" required min="0" max="40">
+                </div>
+                <div class="form-group">
+                    <label for="eval-academico">Desempeño Académico (30%)</label>
+                    <input type="number" id="eval-academico" required min="0" max="30">
+                </div>
+                <div class="form-group">
+                    <label for="eval-social">Logros Deportivos / Proyección (30%)</label>
+                    <input type="number" id="eval-social" required min="0" max="30">
+                </div>
+                <div class="eval-result">
+                    <div class="score-line">Total: <strong id="eval-total-score">0 / 100</strong></div>
+                    <div class="suggest-line">Resultado Sugerido: <strong id="eval-sug-estado">-</strong></div>
+                </div>
+                <div class="form-group">
+                    <label for="eval-estado-final">Dictamen Final</label>
+                    <select id="eval-estado-final">
+                        <option value="Aprobada">Aprobada</option>
+                        <option value="Rechazada">Rechazada</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-gold">Certificar Becario</button>
+                    <button type="button" id="close-eval-modal-btn" class="btn-cancel">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/js/app.js"></script>
 </body>
+
 </html>
