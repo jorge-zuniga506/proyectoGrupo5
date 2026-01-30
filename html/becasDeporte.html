@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAtleta - Becas Deportivas</title>
+    <link rel="stylesheet" href="../css/index.css">
+  
+</head>
+
+<body>
+    <!-- Top Header -->
+    <header class="main-header">
+        <div class="container container-header">
+            <div class="logo-area">
+                <div class="ea-logo">
+                    <!-- Assuming logo path is relative to html folder or standard root -->
+                    <img src="eduatleta_logo.png" alt="EduAtleta Logo">
+                    <div class="brand-text">
+                        <span class="inst">EDUATLETA</span>
+                        <span class="gov">PROGRAMA NACIONAL DE BECAS</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Becas Estudio</a></li>
+                    <li><a href="#" class="highlighted">Becas Deporte</a></li>
+                    <li><a href="#">Directorio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="mega-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">ACERCA DE EDUATLETA</a></li>
+                <li><a href="#">REQUISITOS</a></li>
+                <li><a href="#">ESTUDIOS</a></li>
+                <li><a href="#">DEPORTES</a></li>
+                <li><a href="#">CENTRO DE PRENSA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Solicitud de Beca Deportiva</h1>
+                <p>Completa el formulario para iniciar tu proceso de postulación</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="form-container">
+                <form id="sports-scholarship-form">
+                    <!-- Sección 1: Datos Personales -->
+                    <h3 class="form-section-title">Información Personal</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tipo-id">Tipo de Identificación *</label>
+                            <select id="tipo-id" name="tipo_identificacion" required>
+                                <option value="">Seleccione...</option>
+                                <option value="cedula">Cédula de Identidad</option>
+                                <option value="dimex">DIMEX / Residencia</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <option value="tim">TIM (Menor de edad)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="num-id">Número de Identificación *</label>
+                            <input type="text" id="num-id" name="numero_identificacion" required
+                                placeholder="Ej. 101110111">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellidos *</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha-nacimiento">Fecha de Nacimiento *</label>
+                            <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" required>
+                        </div>
+                    </div>
+
+                    <!-- Sección 2: Domicilio y Contacto -->
+                    <h3 class="form-section-title">Domicilio y Contacto</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="direccion">Dirección Exacta del Domicilio *</label>
+                            <textarea id="direccion" name="direccion" rows="2" required
+                                placeholder="Provincia, Cantón, Distrito, Señas exactas..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono de Contacto *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 8888-8888">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                        </div>
+                    </div>
+
+                    <!-- Sección 3: Encargado Legal (Si aplica) -->
+                    <h3 class="form-section-title">Información del Encargado Legal</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="nombre-encargado">Nombre Completo del Encargado *</label>
+                            <input type="text" id="nombre-encargado" name="nombre_encargado" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="relacion-encargado">Relación / Parentesco *</label>
+                            <select id="relacion-encargado" name="relacion_encargado" required>
+                                <option value="">Seleccione...</option>
+                                <option value="padre">Padre</option>
+                                <option value="madre">Madre</option>
+                                <option value="tutor">Tutor Legal</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contacto-encargado">Teléfono del Encargado *</label>
+                            <input type="tel" id="contacto-encargado" name="contacto_encargado" required>
+                        </div>
+                    </div>
+
+                    <!-- Sección 4: Información Académica -->
+                    <h3 class="form-section-title">Información Académica</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nota-global">Nota Global de Estudio *</label>
+                            <input type="number" id="nota-global" name="nota_global" min="0" max="100" step="0.01"
+                                required placeholder="Ej. 95.5">
+                        </div>
+                    </div>
+
+                    <!-- Sección 5: Información Socioeconómica -->
+                    <h3 class="form-section-title">Información Socioeconómica</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="miembros-hogar">Personas que viven en el hogar *</label>
+                            <input type="number" id="miembros-hogar" name="miembros_hogar" min="1" required
+                                placeholder="Ej. 4">
+                        </div>
+                        <div class="form-group">
+                            <label for="ingresos-hogar">Ingresos Mensuales del Hogar (₡) *</label>
+                            <input type="number" id="ingresos-hogar" name="ingresos_hogar" min="0" required
+                                placeholder="Ej. 500000">
+                        </div>
+                    </div>
+
+                    <!-- Sección 6: Motivo -->
+                    <h3 class="form-section-title">Motivación</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="motivo">Motivo de la Solicitud *</label>
+                            <p style="font-size: 0.8rem; color: #666; margin-bottom: 5px;">Explica por qué necesitas
+                                esta beca y cómo te ayudará en tu carrera deportiva.</p>
+                            <textarea id="motivo" name="motivo_beca" rows="5" required
+                                placeholder="Escribe aquí tu motivación..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-gold btn-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>CONTACTO EDUATLETA</h3>
+                <p> Línea Directa: 2222-BECAS</p>
+                <p> Consultas: becas@eduatleta.go.cr</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 EduAtleta - Gobierno de Costa Rica</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
